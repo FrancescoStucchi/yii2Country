@@ -10,6 +10,7 @@ use Yii;
  * @property string $code
  * @property string $name
  * @property int $population
+ * @property date $date
  */
 class Country extends \yii\db\ActiveRecord
 {
