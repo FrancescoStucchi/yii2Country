@@ -17,7 +17,7 @@ class CountrySearch extends Country
     public function rules()
     {
         return [
-            [['code', 'name'], 'safe'],
+            [['code', 'name', 'date'], 'safe'],
             [['population'], 'integer'],
         ];
     }
@@ -59,6 +59,7 @@ class CountrySearch extends Country
         // grid filtering conditions
         $query->andFilterWhere([
             'population' => $this->population,
+            'date' => $this->date,
         ]);
 
         $query->andFilterWhere(['like', 'code', $this->code])

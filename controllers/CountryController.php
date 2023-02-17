@@ -49,7 +49,7 @@ class CountryController extends Controller
 
     /**
      * Displays a single Country model.
-     * @param string $code
+     * @param string $code Code
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -85,7 +85,7 @@ class CountryController extends Controller
     /**
      * Updates an existing Country model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param string $code
+     * @param string $code Code
      * @return string|\yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -105,7 +105,7 @@ class CountryController extends Controller
     /**
      * Deletes an existing Country model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param string $code
+     * @param string $code Code
      * @return \yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
@@ -119,7 +119,7 @@ class CountryController extends Controller
     /**
      * Finds the Country model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param string $code
+     * @param string $code Code
      * @return Country the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
