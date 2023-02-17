@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use kartik\date\DatePicker;
+
 
 /** @var yii\web\View $this */
 /** @var app\models\Country $model */
@@ -18,7 +20,14 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'population')->textInput() ?>
 
-    <?= $form->field($model, 'ElectionDate')->textInput() ?>
+    <?= $form->field($model, 'election_date')->widget(DatePicker::classname(), [
+        'options' => ['placeholder' => 'Enter birth date ...'],
+        'pluginOptions' => [
+            'autoclose' => true
+        ],
+        'bsVersion'=> 5,
+        ]);
+    ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
