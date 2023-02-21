@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\date\DatePicker;
+use kartik\datecontrol\DateControl;
 
 
 /** @var yii\web\View $this */
@@ -20,15 +21,17 @@ use kartik\date\DatePicker;
 
     <?= $form->field($model, 'population')->textInput() ?>
 
-    <?= $form->field($model, 'election_date')->widget(DatePicker::classname(), [
-        'options' => ['placeholder' => 'Enter election date ...'],
-        'pluginOptions' => [
-            'autoclose' => true,
-            'format' => 'yyyy/mm/dd'
-        ],
-        'bsVersion'=> 5,
+    <?=$form->field($model, 'election_date')->widget(DateControl::classname(), [
+        'type'=>DateControl::FORMAT_DATE,
+        'ajaxConversion'=>false,
+        'widgetOptions' => [
+            'pluginOptions' => [
+                'autoclose' => true
+            ]
+        ]
         ]);
     ?>
+ 
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
