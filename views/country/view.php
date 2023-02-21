@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'code',
             'name',
             'population',
-            'election_date',
+            'election_date:date',
         ],
     ]) ?>
 

@@ -24,6 +24,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
+        //$formatter = \Yii::$app->formatter,
+        //$formatter->asDate('election_date', 'long'),
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
@@ -32,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'code',
             'name',
             'population',
-            'election_date',
+            'election_date:date',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Country $model, $key, $index, $column) {
@@ -40,7 +42,6 @@ $this->params['breadcrumbs'][] = $this->title;
                  }
             ],
         ],
-    ]); ?>
-
-
+    ]);
+    ?>
 </div>

@@ -12,6 +12,12 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
+        'formatter' => [
+            'dateFormat' => 'dd/MM/yyyy',
+            'decimalSeparator' => ',',
+            'thousandSeparator' => ' ',
+            'currencyCode' => 'EUR',
+       ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'TjqLyfVHu7SFSvSKOlvgGU348BzZZlAU',
@@ -50,6 +56,11 @@ $config = [
             ],
         ],
         */
+    ],
+    'modules' => [
+        'datecontrol' =>  [
+             'class' => '\kartik\datecontrol\Module'
+         ]
     ],
     'params' => $params,
 ];
