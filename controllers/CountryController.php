@@ -128,7 +128,7 @@ class CountryController extends Controller
         if (($model = Country::findOne(['code' => $code])) !== null) {
             return $model;
         }
-
+        
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 }

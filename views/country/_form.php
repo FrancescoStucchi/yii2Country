@@ -21,9 +21,10 @@ use kartik\date\DatePicker;
     <?= $form->field($model, 'population')->textInput() ?>
 
     <?= $form->field($model, 'election_date')->widget(DatePicker::classname(), [
-        'options' => ['placeholder' => 'Enter birth date ...'],
+        'options' => ['placeholder' => 'Enter election date ...'],
         'pluginOptions' => [
-            'autoclose' => true
+            'autoclose' => true,
+            'format' => 'yyyy/mm/dd'
         ],
         'bsVersion'=> 5,
         ]);
